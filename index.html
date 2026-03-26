@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUPM PARIAMAN</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="src/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+        <style>
+        body { font-family: 'Montserrat', sans-serif; }
+
+        /* Custom Navbar Styles */
+        .navbar-fixed {
+            background-color: #163C67 !important;
+            position: fixed;
+            z-index: 9999;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(8px);
+        }
+
+        /* Hamburger Animation */
+        .hamburger-active > span:nth-child(1) { transform: rotate(45deg); }
+        .hamburger-active > span:nth-child(2) { opacity: 0; }
+        .hamburger-active > span:nth-child(3) { transform: rotate(-45deg); }
+
+        /* Smooth Dropdown Transitions */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-down { animation: fadeInDown 0.3s ease-out; }
+
+        .toggle-circle { transition: transform 0.3s ease; }
+        #dark-toggle:checked ~ label .toggle-circle { transform: translateX(20px); }
+    </style>
+</head>
+<body class="bg-white">
+
+    <div id="header-placeholder"></div>
+
+<section id="supm-pariaman" class="relative h-screen w-full overflow-hidden">
+    <div class="swiper myHeroSwiper h-full w-full">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide relative">
+                <img src="src/imgslide/DSCF0060.JPG" class="w-full h-full object-cover" alt="Gedung SUPM Pariaman">
+                <div class="absolute inset-0 bg-[#163C67]/60"></div> 
+            </div>
+            <div class="swiper-slide relative">
+                <img src="src/imgslide/DSCF1725.jpg" class="w-full h-full object-cover" alt="Fasilitas SUPM">
+                <div class="absolute inset-0 bg-[#163C67]/60"></div>
+            </div>
+            <div class="swiper-slide relative">
+                <img src="src/imgslide/DSCF9978.JPG" class="w-full h-full object-cover" alt="Praktik Taruna">
+                <div class="absolute inset-0 bg-[#163C67]/60"></div>
+            </div>
+            <div class="swiper-slide relative">
+                <img src="src/imgslide/DSCF9995.JPG" class="w-full h-full object-cover" alt="Praktik Taruna">
+                <div class="absolute inset-0 bg-[#163C67]/60"></div>
+            </div>
+            <div class="swiper-slide relative">
+                <img src="src/imgslide/DSCF9999.JPG" class="w-full h-full object-cover" alt="Praktik Taruna">
+                <div class="absolute inset-0 bg-[#163C67]/60"></div>
+            </div>
+        </div>
+
+        <div class="absolute inset-0 z-20 flex flex-col justify-center items-center px-4 text-center pointer-events-none">
+            <div class="max-w-4xl mx-auto pointer-events-auto">
+                <h1 class="text-white text-[14px] md:text-[16px] font-semibold tracking-[0.2em] uppercase mb-4 opacity-90">
+                    Selamat Datang di
+                </h1>
+                <h2 class="text-white font-bold text-5xl lg:text-8xl mb-4 drop-shadow-2xl leading-tight">
+                    SUPM PARIAMAN
+                </h2>
+                <h3 class="text-yellow-400 font-medium text-lg lg:text-2xl mb-8 italic tracking-wide">
+                    "Pusat Pendidikan & Pelatihan Kelautan Terbaik"
+                </h3>
+                
+                <p class="text-white/90 font-light text-base md:text-[18px] mb-12 leading-relaxed max-w-2xl mx-auto drop-shadow-md">
+                    Mencetak tenaga kerja yang kompeten, disiplin, dan berkarakter di bidang kelautan dan perikanan. Terletak di pesisir Pariaman dengan fasilitas pendukung modern.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                    <a href="#about"
+                       class="group flex items-center justify-center bg-yellow-500 text-[#163C67] text-[15px] font-bold
+                       h-12 px-10 rounded-full hover:bg-white transition-all duration-300 shadow-xl scale-100 hover:scale-105">
+                       Lihat Profil
+                    </a>
+
+                    <a href="#contak"
+                       class="group flex items-center justify-center border-2 border-white/50 text-white text-[15px] font-semibold
+                       h-12 px-10 rounded-full hover:border-yellow-400 hover:text-yellow-400
+                       transition-all duration-300 backdrop-blur-sm">
+                       Hubungi Kami
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper-button-next !text-white/30 hover:!text-yellow-400 transition-all !hidden md:!flex"></div>
+        <div class="swiper-button-prev !text-white/30 hover:!text-yellow-400 transition-all !hidden md:!flex"></div>
+
+        <div class="swiper-pagination !bottom-10"></div>
+    </div>
+</section>
+
+<section id="about" class="py-24 bg-white overflow-hidden">
+    <div class="container mx-auto px-6 lg:px-20 max-w-7xl"> <div class="flex flex-wrap items-center">
+            <div class="w-full lg:w-1/2 mb-12 lg:mb-0 lg:pr-12" data-aos="fade-right" data-aos-duration="1000">
+                <h4 class="font-bold uppercase text-[#163C67] text-lg mb-3 tracking-widest">Tentang Kami</h4>
+                <h2 class="font-bold text-3xl mb-6 lg:text-4xl leading-tight text-slate-900">Sejarah Singkat SUPM Pariaman</h2>
+                <p class="text-slate-600 leading-relaxed mb-8 text-justify">
+                    Didirikan pada 20 Februari 1988 dengan nama SPP Negeri Pariaman di bawah Kementerian Pertanian. Setelah terbentuknya Kementerian Kelautan dan Perikanan, sekolah ini berubah nama menjadi SUPM Pariaman pada 18 Mei 2001. Sebagai sekolah vokasi, kami mencetak SDM terampil dengan sasaran utama anak pelaku perikanan.
+                </p>
+                
+                <div class="bg-slate-50 p-6 rounded-xl border-l-4 border-yellow-500 shadow-sm mb-8 transition-transform hover:scale-[1.02]">
+                    <h5 class="font-bold text-[#163C67] mb-2 italic text-lg">Visi</h5>
+                    <p class="text-slate-600">Penyelenggara pendidikan kelautan dan perikanan yang unggul, berkelanjutan dan bertaraf internasional.</p>
+                </div>
+
+                <div class="bg-[#163C67] p-6 rounded-xl text-white shadow-lg transition-transform hover:scale-[1.02]">
+                    <h5 class="font-bold mb-3 italic text-lg">Misi Utama</h5>
+                    <ul class="text-sm list-disc ml-5 space-y-2 opacity-90">
+                        <li>Pendidikan berbasis kompetensi dan industri.</li>
+                        <li>Tenaga pendidik kependidikan bersertifikasi.</li>
+                        <li>Pengembangan Teaching Factory untuk jiwa wirausaha.</li>
+                        <li>Ekosistem vokasional ramah lingkungan & berkelanjutan.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="w-full lg:w-1/2" data-aos="fade-left" data-aos-duration="1000">
+                <div class="relative group">
+                    <img src="src/logo/nkpi.png" alt="Fasilitas" class="rounded-2xl shadow-2xl w-full h-[500px] object-cover transition duration-500 group-hover:scale-[1.02]">
+                    <div class="absolute -bottom-6 -left-6 bg-yellow-500 p-8 rounded-2xl hidden md:block shadow-xl z-10">
+                        <p class="text-[#163C67] font-bold text-4xl">35+</p>
+                        <p class="text-[#163C67] font-medium text-sm">Tahun Mengabdi</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="proka" class="py-24 bg-slate-50 overflow-hidden">
+    <div class="container mx-auto px-6 lg:px-20 max-w-7xl"> <div class="text-center mb-16" data-aos="zoom-in">
+            <h4 class="font-bold uppercase text-yellow-500 text-sm mb-2 tracking-[0.3em]">Program Keahlian</h4>
+            <h2 class="font-bold text-[#163C67] text-3xl lg:text-4xl mb-4 uppercase">Mencetak SDM Unggul</h2>
+            <div class="w-24 h-1.5 bg-yellow-500 mx-auto rounded-full"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden border border-slate-100 transition-all duration-500 hover:shadow-2xl hover:-translate-y-3" 
+                 data-aos="fade-up" data-aos-delay="100">
+                <div class="p-6 bg-[#163C67] text-white">
+                    <h3 class="font-bold text-2xl">NKPI</h3>
+                    <p class="text-xs opacity-70">Nautika Kapal Penangkap Ikan</p>
+                </div>
+                <div class="p-6">
+                    <p class="text-sm text-slate-500 mb-6 italic min-h-[40px]">Mempelajari navigasi dan pengoperasian kapal penangkap ikan.</p>
+                    <ul class="text-[12px] space-y-3 text-slate-600">
+                        <li class="flex items-center gap-3"><span class="w-2 h-2 bg-yellow-500 rounded-full"></span> Pelayaran & Navigasi</li>
+                        <li class="flex items-center gap-3"><span class="w-2 h-2 bg-yellow-500 rounded-full"></span> Alat Tangkap Ikan</li>
+                        <li class="flex items-center gap-3"><span class="w-2 h-2 bg-yellow-500 rounded-full"></span> Keselamatan Kapal</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden border border-slate-100 transition-all duration-500 hover:shadow-2xl hover:-translate-y-3" 
+                 data-aos="fade-up" data-aos-delay="200">
+                <div class="p-6 bg-[#163C67] text-white">
+                    <h3 class="font-bold text-2xl">TKPI</h3>
+                    <p class="text-xs opacity-70">Teknika Kapal Penangkap Ikan</p>
+                </div>
+                <div class="p-6">
+                    <p class="text-sm text-slate-500 mb-6 italic min-h-[40px]">Fokus pada mesin dan sistem teknis kapal perikanan.</p>
+                    <ul class="text-[12px] space-y-3 text-slate-600">
+                        <li class="flex items-center gap-3"><span class="w-2 h-2 bg-yellow-500 rounded-full"></span> Perawatan Mesin</li>
+                        <li class="flex items-center gap-3"><span class="w-2 h-2 bg-yellow-500 rounded-full"></span> Sistem Kelistrikan</li>
+                        <li class="flex items-center gap-3"><span class="w-2 h-2 bg-yellow-500 rounded-full"></span> Sistem Pendingin</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden border border-slate-100 transition-all duration-500 hover:shadow-2xl hover:-translate-y-3" 
+                 data-aos="fade-up" data-aos-delay="300">
+                <div class="p-6 bg-[#163C67] text-white">
+                    <h3 class="font-bold text-2xl">APAPL</h3>
+                    <p class="text-xs opacity-70">Agribisnis Perikanan Air Payau & Laut</p>
+                </div>
+                <div class="p-6">
+                    <p class="text-sm text-slate-500 mb-6 italic min-h-[40px]">Budidaya organisme perairan di laut dan tambak payau.</p>
+                    <ul class="text-[12px] space-y-3 text-slate-600">
+                        <li class="flex items-center gap-3"><span class="w-2 h-2 bg-yellow-500 rounded-full"></span> Teknik Budidaya</li>
+                        <li class="flex items-center gap-3"><span class="w-2 h-2 bg-yellow-500 rounded-full"></span> Manajemen Kualitas Air</li>
+                        <li class="flex items-center gap-3"><span class="w-2 h-2 bg-yellow-500 rounded-full"></span> Pembenihan Ikan</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden border border-slate-100 transition-all duration-500 hover:shadow-2xl hover:-translate-y-3" 
+                 data-aos="fade-up" data-aos-delay="400">
+                <div class="p-6 bg-[#163C67] text-white">
+                    <h3 class="font-bold text-2xl">APHP</h3>
+                    <p class="text-xs opacity-70">Agribisnis Pengolahan Hasil Perikanan</p>
+                </div>
+                <div class="p-6">
+                    <p class="text-sm text-slate-500 mb-6 italic min-h-[40px]">Pengolahan dan pengawetan hasil perikanan bernilai tambah.</p>
+                    <ul class="text-[12px] space-y-3 text-slate-600">
+                        <li class="flex items-center gap-3"><span class="w-2 h-2 bg-yellow-500 rounded-full"></span> Teknologi Pengolahan</li>
+                        <li class="flex items-center gap-3"><span class="w-2 h-2 bg-yellow-500 rounded-full"></span> Pengemasan & Produk</li>
+                        <li class="flex items-center gap-3"><span class="w-2 h-2 bg-yellow-500 rounded-full"></span> Standar Mutu Pangan</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="relative bg-[#163C67] dark:bg-slate-950 pt-20 transition-colors duration-300 font-sans overflow-hidden">
+    <div class="flex justify-center mb-12" data-aos="fade-down">
+        <span class="bg-white dark:bg-slate-800 text-[#163C67] dark:text-yellow-400 px-8 py-2.5 rounded-full font-bold text-sm tracking-widest uppercase shadow-lg border dark:border-slate-700">
+            Pencapaian Kami
+        </span>
+    </div>
+
+    <div class="relative bg-white dark:bg-slate-900 rounded-t-[60px] md:rounded-t-[100px] pt-20 pb-24 px-6 transition-colors duration-300">
+        <div class="container mx-auto max-w-7xl lg:px-20">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16 md:gap-12 items-start justify-center text-center">
+                
+                <div class="flex flex-col items-center group" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="mb-6 text-yellow-500 dark:text-yellow-400 transition-transform duration-300 group-hover:scale-110">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-14 h-14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <span class="block text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-3">35+</span>
+                    <span class="text-sm font-bold text-slate-500 dark:text-slate-400 tracking-[0.2em] uppercase">Tahun Pengalaman</span>
+                </div>
+
+                <div class="flex flex-col items-center group" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="mb-6 text-yellow-500 dark:text-yellow-400 transition-transform duration-300 group-hover:scale-110">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-14 h-14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                    </div>
+                    <span class="block text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-3">1000+</span>
+                    <span class="text-sm font-bold text-slate-500 dark:text-slate-400 tracking-[0.2em] uppercase">Lulusan Bekerja</span>
+                </div>
+
+                <div class="flex flex-col items-center group" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="mb-6 text-yellow-500 dark:text-yellow-400 transition-transform duration-300 group-hover:scale-110">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-14 h-14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                    </div>
+                    <span class="block text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-3">4</span>
+                    <span class="text-sm font-bold text-slate-500 dark:text-slate-400 tracking-[0.2em] uppercase">Program Keahlian</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bg-white pb-24 px-4 dark:bg-slate-900 font-sans transition-colors duration-300">
+    <div class="container mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-[#163C67] dark:text-white mb-4">Sertifikat Lulusan</h2>
+            <div class="w-24 h-1.5 bg-yellow-400 mx-auto rounded-full"></div>
+            <p class="mt-6 text-gray-600 dark:text-slate-400 max-w-2xl mx-auto text-[15px] font-medium">
+                Lulusan kami dibekali dengan berbagai sertifikasi keahlian standar nasional dan internasional untuk menjamin kesiapan kerja di industri maritim dan pengolahan.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            
+            <div class="group p-6 bg-gray-50 dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700 hover:border-yellow-400 dark:hover:border-yellow-400 hover:bg-white dark:hover:bg-slate-700 hover:shadow-xl transition-all duration-300 text-center" data-aos="fade-up">
+                <div class="w-12 h-12 bg-[#163C67]/10 dark:bg-yellow-400/10 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-[#163C67] dark:group-hover:bg-yellow-400 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#163C67] dark:text-yellow-400 group-hover:text-white dark:group-hover:text-slate-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                </div>
+                <h3 class="font-bold text-gray-800 dark:text-slate-200 text-sm md:text-[15px] tracking-wide uppercase">ANKAPIN II</h3>
+            </div>
+
+            <div class="group p-6 bg-gray-50 dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700 hover:border-yellow-400 dark:hover:border-yellow-400 hover:bg-white dark:hover:bg-slate-700 hover:shadow-xl transition-all duration-300 text-center" data-aos="fade-up" data-aos-delay="50">
+                <div class="w-12 h-12 bg-[#163C67]/10 dark:bg-yellow-400/10 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-[#163C67] dark:group-hover:bg-yellow-400 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#163C67] dark:text-yellow-400 group-hover:text-white dark:group-hover:text-slate-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                </div>
+                <h3 class="font-bold text-gray-800 dark:text-slate-200 text-sm md:text-[15px] tracking-wide uppercase">ATKAPIN II</h3>
+            </div>
+
+            <div class="group p-6 bg-gray-50 dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700 hover:border-yellow-400 dark:hover:border-yellow-400 hover:bg-white dark:hover:bg-slate-700 hover:shadow-xl transition-all duration-300 text-center" data-aos="fade-up" data-aos-delay="100">
+                <div class="w-12 h-12 bg-[#163C67]/10 dark:bg-yellow-400/10 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-[#163C67] dark:group-hover:bg-yellow-400 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#163C67] dark:text-yellow-400 group-hover:text-white dark:group-hover:text-slate-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                </div>
+                <h3 class="font-bold text-gray-800 dark:text-slate-200 text-sm md:text-[15px] tracking-wide uppercase">HACCP</h3>
+            </div>
+
+            <div class="group p-6 bg-gray-50 dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700 hover:border-yellow-400 dark:hover:border-yellow-400 hover:bg-white dark:hover:bg-slate-700 hover:shadow-xl transition-all duration-300 text-center" data-aos="fade-up" data-aos-delay="150">
+                <div class="w-12 h-12 bg-[#163C67]/10 dark:bg-yellow-400/10 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-[#163C67] dark:group-hover:bg-yellow-400 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#163C67] dark:text-yellow-400 group-hover:text-white dark:group-hover:text-slate-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                    </svg>
+                </div>
+                <h3 class="font-bold text-gray-800 dark:text-slate-200 text-sm md:text-[15px] tracking-wide uppercase">CBIB</h3>
+            </div>
+
+            <div class="group p-6 bg-gray-50 dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700 hover:border-yellow-400 dark:hover:border-yellow-400 hover:bg-white dark:hover:bg-slate-700 hover:shadow-xl transition-all duration-300 text-center" data-aos="fade-up" data-aos-delay="200">
+                <div class="w-12 h-12 bg-[#163C67]/10 dark:bg-yellow-400/10 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-[#163C67] dark:group-hover:bg-yellow-400 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#163C67] dark:text-yellow-400 group-hover:text-white dark:group-hover:text-slate-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                    </svg>
+                </div>
+                <h3 class="font-bold text-gray-800 dark:text-slate-200 text-sm md:text-[15px] tracking-wide uppercase">CPIB</h3>
+            </div>
+
+            <div class="group p-6 bg-gray-50 dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700 hover:border-yellow-400 dark:hover:border-yellow-400 hover:bg-white dark:hover:bg-slate-700 hover:shadow-xl transition-all duration-300 text-center" data-aos="fade-up" data-aos-delay="250">
+                <div class="w-12 h-12 bg-[#163C67]/10 dark:bg-yellow-400/10 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-[#163C67] dark:group-hover:bg-yellow-400 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#163C67] dark:text-yellow-400 group-hover:text-white dark:group-hover:text-slate-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                    </svg>
+                </div>
+                <h3 class="font-bold text-gray-800 dark:text-slate-200 text-sm md:text-[15px] tracking-wide uppercase">CPPIB</h3>
+            </div>
+
+            <div class="group p-6 bg-gray-50 dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700 hover:border-yellow-400 dark:hover:border-yellow-400 hover:bg-white dark:hover:bg-slate-700 hover:shadow-xl transition-all duration-300 text-center" data-aos="fade-up" data-aos-delay="300">
+                <div class="w-12 h-12 bg-[#163C67]/10 dark:bg-yellow-400/10 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-[#163C67] dark:group-hover:bg-yellow-400 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#163C67] dark:text-yellow-400 group-hover:text-white dark:group-hover:text-slate-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                    </svg>
+                </div>
+                <h3 class="font-bold text-gray-800 dark:text-slate-200 text-sm md:text-[15px] tracking-wide uppercase">BST</h3>
+            </div>
+
+            <div class="group p-6 bg-gray-50 dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700 hover:border-yellow-400 dark:hover:border-yellow-400 hover:bg-white dark:hover:bg-slate-700 hover:shadow-xl transition-all duration-300 text-center" data-aos="fade-up" data-aos-delay="350">
+                <div class="w-12 h-12 bg-[#163C67]/10 dark:bg-yellow-400/10 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-[#163C67] dark:group-hover:bg-yellow-400 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#163C67] dark:text-yellow-400 group-hover:text-white dark:group-hover:text-slate-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
+                    </svg>
+                </div>
+                <h3 class="font-bold text-gray-800 dark:text-slate-200 text-sm md:text-[15px] tracking-wide uppercase">API</h3>
+            </div>
+
+            <div class="group p-6 bg-gray-50 dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700 hover:border-yellow-400 dark:hover:border-yellow-400 hover:bg-white dark:hover:bg-slate-700 hover:shadow-xl transition-all duration-300 text-center" data-aos="fade-up" data-aos-delay="400">
+                <div class="w-12 h-12 bg-[#163C67]/10 dark:bg-yellow-400/10 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-[#163C67] dark:group-hover:bg-yellow-400 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#163C67] dark:text-yellow-400 group-hover:text-white dark:group-hover:text-slate-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-7.714 2.143L11 21l-2.286-6.857L1 12l7.714-2.143L11 3z" />
+                    </svg>
+                </div>
+                <h3 class="font-bold text-gray-800 dark:text-slate-200 text-sm md:text-[15px] tracking-wide uppercase">Sertifikat Kompetensi</h3>
+            </div>
+
+            <div class="group p-6 bg-gray-50 dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700 hover:border-yellow-400 dark:hover:border-yellow-400 hover:bg-white dark:hover:bg-slate-700 hover:shadow-xl transition-all duration-300 text-center" data-aos="fade-up" data-aos-delay="450">
+                <div class="w-12 h-12 bg-[#163C67]/10 dark:bg-yellow-400/10 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-[#163C67] dark:group-hover:bg-yellow-400 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#163C67] dark:text-yellow-400 group-hover:text-white dark:group-hover:text-slate-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                    </svg>
+                </div>
+                <h3 class="font-bold text-gray-800 dark:text-slate-400 text-sm md:text-[15px] tracking-wide italic">Dan Lain-lain...</h3>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="contak" class="pt-36 pb-16 bg-slate-100 dark:bg-slate-900 font-sans">
+    <div class="container">
+        <div class="w-full px-4">
+            <div class="max-w-xl mx-auto text-center mb-16">
+                <h4 class="text-lg font-bold text-primary mb-2">Layanan Pengaduan & Informasi</h4>
+                <h2 class="text-3xl font-bold text-dark dark:text-white mb-4 sm:text-4xl">Hubungi Kami</h2>
+                <p class="text-[15px] font-medium text-secondary md:text-lg">
+                    Punya pertanyaan terkait PPDB, administrasi, atau kerja sama? Silakan kirimkan pesan Anda melalui formulir di bawah ini atau kunjungi kantor kami.
+                </p>
+            </div>
+
+            <div class="flex flex-wrap">
+                <div class="w-full lg:w-2/3 lg:mx-auto">
+                    <form action="" id="contact-form">
+                        <div class="w-full px-4 mb-8">
+                            <label for="name" class="text-[15px] font-semibold text-primary block mb-2">Nama Lengkap / Instansi</label>
+                            <input type="text" id="name" placeholder="Masukkan nama Anda atau asal instansi" 
+                                class="w-full bg-slate-200 dark:bg-slate-800 text-dark dark:text-white p-3 rounded-md focus:outline-none focus:ring-yellow-400 focus:ring-1 focus:border-yellow-400 border border-transparent text-[15px] font-medium">
+                        </div>
+                        
+                        <div class="w-full px-4 mb-8">
+                            <label for="email" class="text-[15px] font-semibold text-primary block mb-2">Alamat Email</label>
+                            <input type="email" id="email" placeholder="email@contoh.com"
+                                class="w-full bg-slate-200 dark:bg-slate-800 text-dark dark:text-white p-3 rounded-md focus:outline-none focus:ring-yellow-400 focus:ring-1 focus:border-yellow-400 border border-transparent text-[15px] font-medium">
+                        </div>
+
+                        <div class="w-full px-4 mb-8">
+                            <label for="subject" class="text-[15px] font-semibold text-primary block mb-2">Subjek Pesan</label>
+                            <select id="subject" class="w-full bg-slate-200 dark:bg-slate-800 text-dark dark:text-white p-3 rounded-md focus:outline-none focus:ring-yellow-400 focus:ring-1 focus:border-yellow-400 border border-transparent text-[15px] font-medium">
+                                <option value="informasi">Informasi Umum</option>
+                                <option value="ppdb">Pendaftaran Siswa Baru (PPDB)</option>
+                                <option value="humas">Kerja Sama / Humas</option>
+                                <option value="sarpras">Layanan Sarana & Prasarana</option>
+                            </select>
+                        </div>
+
+                        <div class="w-full px-4 mb-8">
+                            <label for="message" class="text-[15px] font-semibold text-primary block mb-2">Pesan Anda</label>
+                            <textarea id="message" placeholder="Tuliskan detail pertanyaan atau laporan Anda..."
+                                class="w-full bg-slate-200 dark:bg-slate-800 text-dark dark:text-white p-3 rounded-md focus:outline-none focus:ring-yellow-400 focus:ring-1 focus:border-yellow-400 border border-transparent h-32 text-[15px] font-medium"></textarea>
+                        </div>
+
+                        <div class="w-full px-4">
+                            <button type="submit" class="text-[15px] font-bold text-white bg-primary py-3 px-8 rounded-full w-full hover:bg-yellow-400 hover:shadow-lg transition duration-500 uppercase tracking-wide">
+                                Kirim Pesan Resmi
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="footer-placeholder"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="src/js.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000, // Kecepatan animasi (1 detik)
+    once: true, // Animasi hanya berjalan sekali saat di-scroll
+  });
+</script>
+    
+</body>
+</html>

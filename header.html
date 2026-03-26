@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUPM PARIAMAN</title>
+    <script src="src/js.js"></script>
+    <link href="src/output.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Montserrat', sans-serif; }
+
+        /* Custom Navbar Styles */
+        .navbar-fixed {
+            background-color: #163C67 !important;
+            position: fixed;
+            z-index: 9999;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(8px);
+        }
+
+        /* Hamburger Animation */
+        .hamburger-active > span:nth-child(1) { transform: rotate(45deg); }
+        .hamburger-active > span:nth-child(2) { opacity: 0; }
+        .hamburger-active > span:nth-child(3) { transform: rotate(-45deg); }
+
+        /* Smooth Dropdown Transitions */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-down { animation: fadeInDown 0.3s ease-out; }
+
+        .toggle-circle { transition: transform 0.3s ease; }
+        #dark-toggle:checked ~ label .toggle-circle { transform: translateX(20px); }
+    </style>
+</head>
+
+<body class="bg-white dark:bg-slate-900 transition duration-300">
+
+<header id="navbar" class="fixed top-0 left-0 w-full flex items-center z-50 transition duration-500 bg-black/20 backdrop-blur-sm border-b border-white/10">
+    <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between relative">
+            
+            <div class="flex-shrink-0">
+                <a href="/index.html" class="flex items-center gap-2 py-4">
+                    <div class="flex gap-2">
+                        <img src="src/logo/LogoKKP1.png" alt="Logo KKP" class="w-7 h-7 sm:w-8 sm:h-8 object-contain">
+                        <img src="src/logo/bppsdm.png" alt="Logo BPPSDM" class="w-8 h-7 sm:w-10 sm:h-8 object-contain">
+                        <img src="src/logo/LogoSupm.png" alt="Logo SUPM" class="w-7 h-7 sm:w-8 sm:h-8 object-contain">
+                    </div>
+                    <span class="tracking-widest uppercase font-bold text-white text-xs lg:text-base hidden sm:block">SUPM PARIAMAN</span>
+                </a>
+            </div>
+
+            <div class="flex items-center">
+                <button id="hamburger" type="button" class="block lg:hidden group p-2">
+                    <span class="block w-6 h-0.5 my-1.5 bg-white origin-top-left transition duration-300"></span>
+                    <span class="block w-6 h-0.5 my-1.5 bg-white transition duration-300"></span>
+                    <span class="block w-6 h-0.5 my-1.5 bg-white origin-bottom-left transition duration-300"></span>
+                </button>
+
+                <nav id="nav-menu" class="hidden absolute py-5 bg-[#163C67] lg:bg-transparent shadow-lg lg:shadow-none rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:max-w-full lg:py-0">
+                    <ul class="block lg:flex lg:items-center lg:gap-2">
+                        
+                        <li class="group">
+                            <a href="index.html" class="text-sm font-semibold text-white py-2 px-5 flex group-hover:text-yellow-400 transition-all">Home</a>
+                        </li>
+
+                        <li class="relative group nav-dropdown-item">
+                            <button type="button" class="nav-dropdown-btn w-full lg:w-auto flex items-center justify-between lg:justify-start gap-1 text-sm font-semibold text-white px-5 py-2 lg:py-2.5 hover:text-yellow-400 transition-colors">
+                                PROKA
+                                <svg class="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/>
+                                </svg>
+                            </button>
+                            <ul class="hidden group-hover:block animate-fade-in-down lg:absolute left-0 top-full mt-0 bg-[#1c4a7e] shadow-2xl rounded-b-lg min-w-[270px] border-t-4 border-yellow-400 z-50">
+                                <li><a href="#" class="block px-5 py-3 text-sm text-white italic border-b border-white/5 hover:bg-yellow-400 hover:text-[#163C67] transition-all">Nautika Kapal Penangkap Ikan (NKPI)</a></li>
+                                <li><a href="#" class="block px-5 py-3 text-sm text-white italic border-b border-white/5 hover:bg-yellow-400 hover:text-[#163C67] transition-all">Teknika Kapal Penangkap Ikan (TKPI)</a></li>
+                                <li><a href="#" class="block px-5 py-3 text-sm text-white italic border-b border-white/5 hover:bg-yellow-400 hover:text-[#163C67] transition-all">Agribisnis Perikanan Air Tawar (APAT)</a></li>
+                                <li><a href="#" class="block px-5 py-3 text-sm text-white italic hover:bg-yellow-400 hover:text-[#163C67] transition-all">Agribisnis Pengolahan Hasil Perikanan (APHPi)</a></li>
+                            </ul>
+                        </li>
+                        <li class="relative group nav-dropdown-item">
+                            <button type="button" class="nav-dropdown-btn w-full lg:w-auto flex items-center justify-between lg:justify-start gap-1 text-sm font-semibold text-white px-5 py-2 lg:py-2.5 hover:text-yellow-400 transition-colors">
+                                TIMJA
+                                <svg class="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/>
+                                </svg>
+                            </button>
+                            
+                            <ul class="hidden group-hover:block animate-fade-in-down lg:absolute lg:right-0 lg:top-full mt-0 bg-[#1c4a7e] shadow-2xl rounded-b-lg min-w-[220px] border-t-4 border-yellow-400 z-50">
+                                
+                                <li class="relative group/sub border-b border-white/5">
+                                    <div class="flex items-center justify-between px-5 py-3 text-sm text-white font-medium cursor-pointer hover:bg-yellow-400 hover:text-[#163C67] transition-all">
+                                        <svg class="w-3 h-3 rotate-90 lg:block hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/>
+                                        </svg>
+                                        <span>Kepegawaian</span>
+                                    </div>
+                                    <ul class="hidden group-hover/sub:block lg:absolute lg:right-full lg:top-[-4px] lg:mr-0 bg-[#245a96] shadow-2xl rounded-lg min-w-[180px] border-r-4 border-yellow-400 z-[60]">
+                                        <li><a href="kepegawaian.html" class="block px-5 py-2.5 text-xs text-white hover:bg-white/10 text-right">Tim Kerja</a></li>
+                                        <li><a href="#" class="block px-5 py-2.5 text-xs text-white hover:bg-white/10 text-right">Dokumentasi</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="relative group/sub border-b border-white/5">
+                                    <div class="flex items-center justify-between px-5 py-3 text-sm text-white font-medium cursor-pointer hover:bg-yellow-400 hover:text-[#163C67] transition-all">
+                                        <svg class="w-3 h-3 rotate-90 lg:block hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/>
+                                        </svg>
+                                        <span>Humas</span>
+                                    </div>
+                                    <ul class="hidden group-hover/sub:block lg:absolute lg:right-full lg:top-[-4px] lg:mr-0 bg-[#245a96] shadow-2xl rounded-lg min-w-[180px] border-r-4 border-yellow-400 z-[60]">
+                                        <li><a href="humas.html" class="block px-5 py-2.5 text-xs text-white hover:bg-white/10 text-right">Tim Kerja</a></li>
+                                        <li><a href="#" class="block px-5 py-2.5 text-xs text-white hover:bg-white/10 text-right">Dokumentasi</a></li>
+                                    </ul>
+                                </li>
+                                 <li class="relative group/sub last:border-0">
+                                    <div class="flex items-center justify-between px-5 py-3 text-sm text-white font-medium cursor-pointer hover:bg-yellow-400 hover:text-[#163C67] transition-all">
+                                        <svg class="w-3 h-3 rotate-90 lg:block hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/>
+                                        </svg>
+                                        <span>RTP</span>
+                                    </div>
+                                    <ul class="hidden group-hover/sub:block lg:absolute lg:right-full lg:top-[-4px] lg:mr-0 bg-[#245a96] shadow-2xl rounded-lg min-w-[180px] border-r-4 border-yellow-400 z-[60]">
+                                        <li><a href="rtp.html" class="block px-5 py-2.5 text-xs text-white hover:bg-white/10 text-right">Tim Kerja</a></li>
+                                        <li><a href="#" class="block px-5 py-2.5 text-xs text-white hover:bg-white/10 text-right">Dokumentasi</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="relative group/sub last:border-0">
+                                    <div class="flex items-center justify-between px-5 py-3 text-sm text-white font-medium cursor-pointer hover:bg-yellow-400 hover:text-[#163C67] transition-all">
+                                        <svg class="w-3 h-3 rotate-90 lg:block hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/>
+                                        </svg>
+                                        <span>Perpustakaan</span>
+                                    </div>
+                                    <ul class="hidden group-hover/sub:block lg:absolute lg:right-full lg:top-[-4px] lg:mr-0 bg-[#245a96] shadow-2xl rounded-lg min-w-[180px] border-r-4 border-yellow-400 z-[60]">
+                                        <li><a href="perpustakaan.html" class="block px-5 py-2.5 text-xs text-white hover:bg-white/10 text-right">Tim Kerja</a></li>
+                                        <li><a href="#" class="block px-5 py-2.5 text-xs text-white hover:bg-white/10 text-right">Dokumentasi</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="relative group/sub last:border-0">
+                                    <div class="flex items-center justify-between px-5 py-3 text-sm text-white font-medium cursor-pointer hover:bg-yellow-400 hover:text-[#163C67] transition-all">
+                                        <svg class="w-3 h-3 rotate-90 lg:block hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/>
+                                        </svg>
+                                        <span>Tambak</span>
+                                    </div>
+                                    <ul class="hidden group-hover/sub:block lg:absolute lg:right-full lg:top-[-4px] lg:mr-0 bg-[#245a96] shadow-2xl rounded-lg min-w-[180px] border-r-4 border-yellow-400 z-[60]">
+                                        <li><a href="#" class="block px-5 py-2.5 text-xs text-white hover:bg-white/10 text-right">Tim Kerja</a></li>
+                                        <li><a href="#" class="block px-5 py-2.5 text-xs text-white hover:bg-white/10 text-right">Dokumentasi</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="group">
+                            <a href="#contact" class="text-sm font-semibold text-white py-2 px-5 flex group-hover:text-yellow-400 transition-all">Kontak</a>
+                        </li>
+
+                        <li class="flex items-center lg:ml-4 px-5 lg:px-0 py-2 lg:py-0">
+                            <input type="checkbox" id="dark-toggle" class="hidden">
+                            <label for="dark-toggle" class="cursor-pointer group">
+                                <div class="flex h-6 w-11 items-center rounded-full bg-white/10 p-1 border border-white/30 group-hover:border-yellow-400 transition">
+                                    <div class="toggle-circle h-4 w-4 rounded-full bg-yellow-400"></div>
+                                </div>
+                            </label>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+</body>
+</html>

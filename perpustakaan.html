@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUPM PARIAMAN</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="src/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+        <style>
+        body { font-family: 'Montserrat', sans-serif; }
+
+        /* Custom Navbar Styles */
+        .navbar-fixed {
+            background-color: #163C67 !important;
+            position: fixed;
+            z-index: 9999;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(8px);
+        }
+
+        /* Hamburger Animation */
+        .hamburger-active > span:nth-child(1) { transform: rotate(45deg); }
+        .hamburger-active > span:nth-child(2) { opacity: 0; }
+        .hamburger-active > span:nth-child(3) { transform: rotate(-45deg); }
+
+        /* Smooth Dropdown Transitions */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-down { animation: fadeInDown 0.3s ease-out; }
+
+        .toggle-circle { transition: transform 0.3s ease; }
+        #dark-toggle:checked ~ label .toggle-circle { transform: translateX(20px); }
+    </style>
+</head>
+<body class="bg-white">
+
+    <div id="header-placeholder"></div>
+<section id="perpustakaan" class="py-20 bg-white">
+    <div class="container mx-auto px-6 lg:px-20 max-w-7xl">
+        
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+            
+            <div class="w-full lg:w-1/2" data-aos="fade-right">
+                <div class="relative">
+                    <div class="absolute -top-4 -left-4 w-24 h-24 bg-yellow-400 rounded-2xl -z-10 opacity-20"></div>
+                    <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-[#163C67] rounded-full -z-10 opacity-10"></div>
+                    
+                    <div class="rounded-3xl overflow-hidden shadow-2xl border-8 border-white">
+                        <img src="https://via.placeholder.com/800x600" alt="Ruang Perpustakaan" 
+                             class="w-full h-auto object-cover hover:scale-105 transition duration-700">
+                    </div>
+
+                    <div class="absolute bottom-6 left-6 bg-white p-4 rounded-2xl shadow-xl border-l-4 border-yellow-500 hidden sm:block">
+                        <p class="text-[#163C67] font-bold text-2xl">5.000+</p>
+                        <p class="text-slate-500 text-xs font-semibold uppercase tracking-wider">Koleksi Buku</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full lg:w-1/2" data-aos="fade-left">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#163C67] mb-4">
+                    Pusat Literasi & <br><span class="text-yellow-600">E-Library</span>
+                </h2>
+                <div class="w-20 h-1.5 bg-yellow-500 rounded-full mb-6"></div>
+                
+                <p class="text-slate-600 leading-relaxed mb-8">
+                    Perpustakaan SUPM Pariaman menyediakan akses ke ribuan referensi ilmiah, baik dalam bentuk fisik maupun digital (E-Book), untuk mendukung penelitian dan proses belajar mengajar taruna di bidang kelautan dan perikanan.
+                </p>
+
+                <div class="space-y-4 mb-10">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-yellow-100 p-2 rounded-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-[#163C67]">Koleksi Lengkap</h4>
+                            <p class="text-sm text-slate-500">Buku teks perikanan, navigasi, hingga jurnal internasional.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div class="bg-blue-100 p-2 rounded-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#163C67]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-[#163C67]">Akses Digital</h4>
+                            <p class="text-sm text-slate-500">Akses komputer dengan internet cepat untuk riset taruna.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap gap-4">
+                    <a href="#" class="px-8 py-3 bg-[#163C67] text-white font-bold rounded-xl hover:bg-opacity-90 transition shadow-lg">
+                        Kunjungi E-Library
+                    </a>
+                    <a href="#" class="px-8 py-3 border-2 border-slate-200 text-slate-600 font-bold rounded-xl hover:bg-slate-50 transition">
+                        Cari Katalog
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<div id="footer-placeholder"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="src/js.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000, // Kecepatan animasi (1 detik)
+    once: true, // Animasi hanya berjalan sekali saat di-scroll
+  });
+</script>
+    
+</body>
+</html>
